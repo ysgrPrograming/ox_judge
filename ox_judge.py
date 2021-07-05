@@ -117,13 +117,13 @@ scene = convert_nto10(data_list, 3)+turn*scene_size
 #出力
 #必勝の有無、手数を宣言
 if scenes[scene] < 0:
-    num = -math.log2(abs(scenes[scene]))
-    print("Enemy wins in", int(num), "moves")
+    num = int(-math.log2(abs(scenes[scene])))
+    print("Enemy wins in", num, "moves")
 elif scenes[scene] == 0:
     print("Draw")
 else:
-    num = -math.log2(abs(scenes[scene]))//1
-    print("Player wins in", int(num), "moves")
+    num = int(-math.log2(abs(scenes[scene])))
+    print("Player wins in", num, "moves")
 
 #手順
 print_t(scene)
